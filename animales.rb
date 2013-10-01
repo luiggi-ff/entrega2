@@ -1,123 +1,136 @@
-module terrestre
+module Terrestre
         def caminar()
-                    puts "camina"
-                        end
+            puts "camina"
+        end
 end
 
-module acuatico
+module Acuatico
         def nadar()
-                    puts "nada"
-                        end
+            puts "nada"
+        end
 end
 
-module volador
+module Volador
         def volar()
-                    puts vuela
-                        end
+            puts "vuela"
+        end
 end
 
-module hablar
+module Hablar
         def hablar()
-                    puts "bla bla"
-                        end
+            puts "bla bla"
+        end
 end
 
-module ladra
+module Ladra
         def ladrar()
-                    puts "guau guau"
-                        end
+            puts "guau guau"
+        end
 end
 
-module desplazar
+module Desplazar
         def desplazar()
-                    puts "se desplaza"
-                        end
+            puts "se desplaza"
+        end
 end
 
-module presionar
+module Presionar
         def presionar()
-                    puts "presiona"
-                        end
+            puts "presiona"
+        end
 end
 
-module moder
+module Morder
         def morder()
-                    puts "muerde"
-                        end
+            puts "muerde"
+         end
 end
 
-module saltar
+module Saltar
         def salta()
-                    puts "salta"
-                        end
+            puts "salta"
+        end
 end
 
 
 
-class mamifero
+class Mamifero
 end
 
-class hombre < mamifero
-        include terrestre
-            include acuatico
-                include hablar
+class Hombre < Mamifero
+        include Terrestre
+        include Acuatico
+        include Hablar
 end
 
-class perro < mamifero
-        include terrestre
-            include ladrar
+class Perro < Mamifero
+        include Terrestre
+        include Ladra
 end
 
-class ballena<mamifero
-        include acuatico
-end
-
-
-class ave
-        include terrestre
-end
-
-class aguila < ave
-        include volador
-end
-
-class pinguino<ave
-        include acuatico
-end
-
-class reptiles
-end
-
-class cocodrilo< reptiles
-        include acuatico
-            include terrestre
-end
-
-class boa < reptiles
-        include desplazar
-            include presionar
-end
-
-class cobra < reptiles
-        include desplazar
-            include morder
-end
-
-class anfibio
-        include acuatico
-end
-
-class sapo< anfibio
-        include saltar
-end
-
-class pez
-        include acuatico
-end
-
-class tiburon < pez
+class Ballena<Mamifero
+        include Acuatico
 end
 
 
+class Ave
+        include Terrestre
+end
+
+class Aguila < Ave
+        include Volador
+end
+
+class Pinguino<Ave
+        include Acuatico
+end
+
+class Reptiles
+end
+
+class Cocodrilo< Reptiles
+        include Acuatico
+        include Terrestre
+end
+
+class Boa < Reptiles
+        include Desplazar
+        include Presionar
+end
+
+class Cobra < Reptiles
+        include Desplazar
+        include Morder
+end
+
+class Anfibio
+        include Acuatico
+end
+
+class Sapo< Anfibio
+        include Saltar
+end
+
+class Pez
+        include Acuatico
+end
+
+class Tiburon < Pez
+end
+
+
+
+juan=Hombre.new
+juan.caminar
+juan.hablar
+
+pepe=Sapo.new
+pepe.salta
+
+agui=Aguila.new
+agui.volar
+    
+boby=Perro.new
+boby.volar
 
 
