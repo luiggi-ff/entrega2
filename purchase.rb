@@ -22,10 +22,7 @@ class Purchase
     end
 
     def total=(number)
-        #total=0
-        #@products.each {|prod| total+= prod.price}
         @total=number
-        #block.call(@total) if block_given?
         return @total
     end
 
